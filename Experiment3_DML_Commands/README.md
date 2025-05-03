@@ -82,6 +82,7 @@ CASE WHEN value2<10 THEN 'Small' WHEN value2 BETWEEN 10 AND 50 THEN 'Medium' ELS
 ![image](https://github.com/user-attachments/assets/ee9be76a-4b02-4a33-b058-4634401c7564)
 
 **Question 4**
+--
 Write a SQL query to find all those customers who does not have any grade. Return customer_id, cust_name, city, grade, salesman_id. Sample table: customer
 
 ![image](https://github.com/user-attachments/assets/31779556-1b76-4000-88b0-f3e379a293a8)
@@ -95,6 +96,7 @@ SELECT customer_id, cust_name, city, grade, salesman_id FROM customer WHERE grad
 
 
 **Question 5**
+--
 Write a SQL query to find customers who are either from the city 'New York' or who do not have a grade greater than 100. Return customer_id, cust_name, city, grade, and salesman_id. Sample table: customer
 
 ![image](https://github.com/user-attachments/assets/e508821b-9b94-492e-a963-d51a41f51dbb)
@@ -107,6 +109,7 @@ SELECT customer_id, cust_name, city, grade, salesman_id FROM customer WHERE city
 ![image](https://github.com/user-attachments/assets/63f39970-a055-4e1b-92b4-179292ad27a0)
 
 **Question 6**
+--
 Write a SQL query to identify products where the discount amount is greater than $50. Return product_id, original_price, discount_percentage, and discount_amount. Sample table: products
 
 ![image](https://github.com/user-attachments/assets/909feee8-8742-4a0d-880c-1b5347fa3a09)
@@ -114,17 +117,24 @@ Write a SQL query to identify products where the discount amount is greater than
 Answer:
 
 SELECT product_id, original_price,discount_percentage,original_price * discount_percentage AS discount_amount FROM products WHERE original_price * discount_percentage > 50;
+
 **Output:**
 
+![image](https://github.com/user-attachments/assets/53f2307f-d953-46d6-bbcb-525e21f41235)
 
 
 **Question 7**
+--
 Write a SQL query to calculate the original price using the discount percentage and the given discounted price. Return product_id, discounted_price, discount_percentage, and original_price. Sample table: Products
+
+![image](https://github.com/user-attachments/assets/ffeef16c-88aa-4217-83f5-35b2300b4b16)
 
 Answer:
 
 SELECT product_id,discounted_price,discount_percentage, discounted_price/(1 discount_percentage) AS original_price FROM Products;
 **Output:**
+
+![image](https://github.com/user-attachments/assets/ba26a970-a9b8-48d6-bc2b-fae11bdf21f0)
 
 
 **Question 8**
@@ -141,21 +151,22 @@ SELECT ename,hiredate, CASE strftime('%w',hiredate) WHEN '0' THEN 'Sunday' WHEN 
 
 
 **Question 9**
+--
 Write a SQL query to find all employees who were hired on a weekend (Saturday or Sunday) from the emp table emp table
 
+![image](https://github.com/user-attachments/assets/7823401e-4d48-49ca-ba8f-5fea821f24ef)
 
 Answer:
 
 SELECT ename,hiredate, CASE strftime('%w',hiredate) WHEN '0' THEN '0' WHEN '6' THEN '6' END AS day_of_week FROM emp WHERE strftime('%w',hiredate) IN ('0','6');
 **Output:**
+![image](https://github.com/user-attachments/assets/0f647ea1-25e0-48ee-9866-993096e13fea)
 
-![image](https://github.com/user-attachments/assets/c6351613-c9b4-43f8-8e2d-bee7145c3720)
 
 **Question 10**
 ---
 Write a SQL query to Concatenate the first three characters of the employee's name with the last three characters of their job title. Table name: emp
 
-![image](https://github.com/user-attachments/assets/ae375009-5de8-484a-93b6-c503aadf1e44)
 ![image](https://github.com/user-attachments/assets/1ff1fcb2-28f6-4e3e-a0bf-0bf50278a876)
 
 
