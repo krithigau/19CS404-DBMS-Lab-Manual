@@ -38,75 +38,79 @@ HAVING condition;
 
 **Question 1**
 --
--- Paste Question 1 here
+Sample table:Appointments Table
 
-```sql
--- Paste your SQL code below for Question 1
-```
+![image](https://github.com/user-attachments/assets/d7ebb841-8a85-4c53-acdd-6b509f6a956a)
+
+
+Answer: SELECT strftime('%H',AppointmentDateTime) AS HourOfDay, COUNT(*) AS TotalAppointments FROM Appointments GROUP BY strftime('%H',AppointmentDateTime) ORDER BY HourOfDay;
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/b65dfb92-2fef-4003-8aec-1eb0ffa4b1b6)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+How many patients are there in each age group category (e.g., under 20, 20-30, 30-40, etc.)? Sample table: Patients Table
 
-```sql
--- Paste your SQL code below for Question 2
-```
+Answer:
+
+![image](https://github.com/user-attachments/assets/3ae6cd58-b757-4095-952c-3dbf7f14407a)
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/ce06755b-23af-4810-82f9-41c97d649268)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+How many prescriptions were written in each frequency category (e.g., once daily, twice daily)? Sample tablePrescriptions Table
 
-```sql
--- Paste your SQL code below for Question 3
-```
+Answer: SELECT
+Frequency, COUNT(*) AS TotalPrescriptions FROM Prescriptions GROUP BY Frequency ORDER BY Frequency;
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/320c8e05-d6dd-400c-834a-4b33a11bbb44)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+Write a SQL query to Calculate the average income of the employees with names starting with 'A':
+Table: employee
 
-```sql
--- Paste your SQL code below for Question 4
-```
+![image](https://github.com/user-attachments/assets/7b8f625b-c184-47d0-98bb-e747bbd802be)
 
+Answer: SELECT
+AVG(income) AS avg_income FROM employee WHERE name LIKE 'A%';
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/96f82f6e-67e0-485a-a82b-58ee844e76e4)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+Write a SQL query to calculate the total number of working hours of all employees Sample table: employee1
 
-```sql
--- Paste your SQL code below for Question 5
-```
+Answer:
+
+SELECT
+SUM(workhour) AS "Total working hours" FROM employee1;
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/c3088c92-b2c1-4ef4-8ea2-41cd47fc0cb0)
 
 **Question 6**
 ---
--- Paste Question 6 here
+Write a SQL query to calculate total purchase amount of all orders. Return total purchase amount.
 
-```sql
--- Paste your SQL code below for Question 6
-```
-
+Sample table: orders
+![image](https://github.com/user-attachments/assets/4f76738a-abbb-42ed-a9a9-4ecb5c9ebbb5)
+Answer: SELECT SUM(purch_amt) AS TOTAL FROM orders;
 **Output:**
-
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/f7eff39a-6765-4e3f-9283-0c95e04ef9ca)
 
 **Question 7**
 ---
