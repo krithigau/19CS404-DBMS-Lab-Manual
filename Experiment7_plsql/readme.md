@@ -178,9 +178,8 @@ END;
 **Expected Output:**  
 a = 10, b = 9, c = 15  
 Largest of three number is 15
-
+```
 ![image](https://github.com/user-attachments/assets/82db2b55-1855-4a8b-b63f-8fc2a652ffd6)
 
-```
 ## RESULT
 Thus, the PL/SQL programs using variables, conditionals, and loops were executed successfully.
